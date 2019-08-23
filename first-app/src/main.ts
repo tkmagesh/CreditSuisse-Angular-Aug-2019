@@ -8,7 +8,9 @@ import { environment } from './environments/environment';
 
 let { add } = calculator;*/
 
-import { add } from './calculator';
+/*import { add } from './calculator';*/
+
+import calc from './calculator';
 
 
 if (environment.production) {
