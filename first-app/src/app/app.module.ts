@@ -6,6 +6,8 @@ import { GreeterComponent } from './greeter/greeter.component';
 import { CalculatorOneComponent } from './calculator/calculatorOne.component';
 import { CalculatorTwoComponent } from './calculator/calculatorTwo.component';
 import { CalculatorResultComponent } from './calculator/calculatorResult.component';
+import { ProductsComponent } from './products/products.component';
+
 
 @NgModule({
   declarations: [
@@ -14,11 +16,18 @@ import { CalculatorResultComponent } from './calculator/calculatorResult.compone
     , CalculatorOneComponent
     , CalculatorTwoComponent
     , CalculatorResultComponent
+    , ProductsComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent, GreeterComponent, CalculatorOneComponent, CalculatorTwoComponent]
+  bootstrap: [
+    AppComponent, 
+    GreeterComponent, 
+    CalculatorOneComponent, 
+    CalculatorTwoComponent,
+    ProductsComponent
+  ]
 })
 export class AppModule { }
