@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+	margin-left: 50px;
+}
+section{
+	margin-bottom: 10px;
+}
+.stats, .bugname{
+	font-size: 20pt;
+}
+.closed{
+	color : red;
+	text-decoration: line-through;
+	font-style: italic;
+	font-weight: bold;
+}
+.bugname{
+	cursor : pointer;
+}
+ol{
+	list-style: none;
+	width: 500px;
+	-webkit-padding-start : 0px;
+}
+li{
+	border : 2px solid gray;
+	background-color: #e7e7e7;
+	padding: 10px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+}
