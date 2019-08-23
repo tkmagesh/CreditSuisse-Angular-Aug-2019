@@ -9,13 +9,7 @@ export class CalculatorOneComponent{
 	value1 : number = 0;
 	value2 : number = 0;
 
-	setValue1(v){
-		this.value1 = Number(v);
-	}
-
-	setValue2(v){
-		this.value2 = Number(v);
-	}
+	
 	onAddClick(value1, value2){
 		this.result = this.value1 + this.value2;
 	}
