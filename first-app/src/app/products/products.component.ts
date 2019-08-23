@@ -12,5 +12,5 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent{
 
-	productNames = ['Pen', 'Pencil', 'Marker' , 'Scribble Pad']
+	productNames : Array<string> = ['Pen', 'Pencil', 'Marker' , 'Scribble Pad'];
 }

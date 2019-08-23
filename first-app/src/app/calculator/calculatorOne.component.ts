@@ -7,7 +7,14 @@ import { CalculatorModel } from './CalculatorModel';
 })
 export class CalculatorOneComponent{
 	
-	model : CalculatorModel = new CalculatorModel();
+	/*model : CalculatorModel ;
 
+	constructor(_model : CalculatorModel){
+		this.model = _model;
+	}*/
+
+	constructor(public model : CalculatorModel){
+
+	}
 	
 }
