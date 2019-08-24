@@ -27,6 +27,7 @@ export class BugTrackerComponent implements OnInit{
 	onBugCreated(newBug : Bug){
 		this.bugs = [...this.bugs, newBug];
 	}
+	
 	onBugNameClick(bugToToggle : Bug){
 		let toggledBug = this.bugOperations.toggle(bugToToggle);
 		this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug);
