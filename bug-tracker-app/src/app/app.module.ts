@@ -5,18 +5,23 @@ import { AppComponent } from './app.component';
 import { BugTrackerComponent } from './bugTracker/bugTracker.component';
 
 import { TrimTextPipe } from './bugTracker/pipes/trimText.pipe';
+import { SortPipe } from './bugTracker/pipes/sort.pipe';
+
+import { BugOperationsService } from './bugTracker/services/bugOperations.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     BugTrackerComponent,
-    TrimTextPipe
-
+    TrimTextPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+  	BugOperationsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
