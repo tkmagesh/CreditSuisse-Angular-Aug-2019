@@ -39,9 +39,26 @@
 	(done) 3. Toggle the 'closed' status of any bug
 	(done) 4. Remove closed bugs
 	(done) 5. Display stats (# of closed bugs / total # of bugs)
-	6. Improve the bug display
-	7. sort the bugs
+	(done) 6. Improve the bug display
+	(done 7. sort the bugs
 	8. Persist the bugs in the localStorage
+	window.localStorage (object)
+	===================
+	* key/value store
+	* key and value must be strings
+		(Use JSON.stringify & JSON.parse for serialization and deserialization)
+		(assign a unique id to the bug)
+	* SOP (same origin policy)
+	* ~10MB Storage limit
+	* APIs
+	======
+		- setItem(key, value)
+		- getItem(key) => value
+		- removeItem(key)
+		- key(index) => key at index
+		- clear()
+		- length
+
 	9. Display 'created at' for each bug
 	10. Persist the bugs in the server
 	11. Make the bugs accessible using unique urls
