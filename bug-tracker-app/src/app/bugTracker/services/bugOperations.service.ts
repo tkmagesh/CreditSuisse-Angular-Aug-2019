@@ -12,8 +12,9 @@ export class BugOperationsService{
 		let newBugData : Bug = {
 			id : 0,
 			name : bugName,
-			isClosed : false
-		}
+			isClosed : false,
+			createdAt : new Date()
+		};
 		return this.bugStorage.save(newBugData);
 	}
 

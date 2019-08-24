@@ -20,10 +20,10 @@ export class BugStorageService{
 	save(bugData : Bug) : Bug{
 		if (bugData.id === 0)
 			bugData.id = ++this.currentBugId;
-		this.storage.setItem(bugData.id, JSON.stringify(bugData));
+		this.storage.setItem(bugData.id.toString(), JSON.stringify(bugData));
 		return bugData;
 	}
 	remove(bugData : Bug) : void {
-		this.storage.removeItem(bugData.id);
+		this.storage.removeItem(bugData.id.toString());
 	}
 }
