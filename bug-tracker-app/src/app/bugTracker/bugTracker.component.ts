@@ -11,6 +11,8 @@ import { BugOperationsService } from './services/bugOperations.service';
 export class BugTrackerComponent{
 	bugs : Bug[] = [];
 
+	newBugName : string = '';
+
 	bugSortBy : string = 'name';
 	bugSortDesc : boolean = false;
 	
@@ -23,11 +25,12 @@ export class BugTrackerComponent{
 
 	onAddNewClick(bugName : string){
 		let newBug : Bug = this.bugOperations.createNew(bugName);
-		this.bugs.push(newBug);
+		this.bugs = [...this.bugs, newBug];
 	}
 
-	onBugNameClick(bug : Bug){
-		this.bugOperations.toggle(bug);
+	onBugNameClick(bugToToggle : Bug){
+		let toggledBug = this.bugOperations.toggle(bugToToggle);
+		this.bugs = this.bugs.map(bug => bug ===bugToToggle ? toggledBug : bug);
 	}
 
 	onRemoveClosedClick(){
