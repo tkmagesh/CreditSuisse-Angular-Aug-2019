@@ -11,7 +11,7 @@ import { BugOperationsService } from './services/bugOperations.service';
 export class BugTrackerComponent implements OnInit{
 	bugs : Bug[] = [];
 
-	newBugName : string = '';
+	
 
 	bugSortBy : string = 'name';
 	bugSortDesc : boolean = false;
@@ -24,11 +24,9 @@ export class BugTrackerComponent implements OnInit{
 		this.bugs = this.bugOperations.getAll();
 	}
 
-	onAddNewClick(bugName : string){
-		let newBug : Bug = this.bugOperations.createNew(bugName);
+	onBugCreated(newBug : Bug){
 		this.bugs = [...this.bugs, newBug];
 	}
-
 	onBugNameClick(bugToToggle : Bug){
 		let toggledBug = this.bugOperations.toggle(bugToToggle);
 		this.bugs = this.bugs.map(bug => bug.id === bugToToggle.id ? toggledBug : bug);
