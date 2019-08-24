@@ -5,6 +5,13 @@
       "name": "Application not responding",
       "isClosed": false,
       "createdAt": "2019-08-16T07:26:32.569Z"
+    },
+    {
+      "id": 3,
+      "name": "User actions not recogized",
+      "isClosed": true,
+      "createdAt": "2019-08-24T12:17:07.148Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur aliquam id pariatur ipsa expedita nesciunt doloribus facilis architecto quisquam totam veniam odio, minima, labore deleniti, neque nam quia amet eveniet."
     }
   ],
   "projects": [

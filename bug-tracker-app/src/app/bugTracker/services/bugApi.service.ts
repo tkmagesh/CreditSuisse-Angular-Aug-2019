@@ -4,7 +4,7 @@ import { Bug } from '../models/Bug';
 import { Observable } from 'rxjs';
 
 export class BugApiService{
-	private serviceEndPoint = 'http://localhost:3000/bugs';
+	private serviceEndPoint = 'http://localhost:3300/bugs';
 
 	constructor(private http : HttpClient){
 

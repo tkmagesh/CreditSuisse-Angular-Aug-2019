@@ -1,4 +1,6 @@
 <div>
+	<div>{{message}}</div>
+	
 	<app-bug-stats [bugs]="bugs"></app-bug-stats>
 	
 	<section class="sort">
@@ -12,7 +14,7 @@
 	</section>
 
 	<app-bug-edit (onNewBug)="onBugCreated($event)"></app-bug-edit>
-	
+
 	<section class="list">
 		<ol>
 			<li *ngFor="let bug of ( bugs | sort:bugSortBy:bugSortDesc ) ">

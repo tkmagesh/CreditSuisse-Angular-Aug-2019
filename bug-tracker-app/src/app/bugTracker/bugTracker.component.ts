@@ -54,6 +54,8 @@ export class BugTrackerComponent implements OnInit{
 	bugSortBy : string = 'name';
 	bugSortDesc : boolean = false;
 	
+	message : string = '';
+
 	constructor(private bugOperations : BugOperationsService){
 		
 	}
@@ -65,7 +67,18 @@ export class BugTrackerComponent implements OnInit{
 	loadAllBugs(){
 		this.bugOperations
 			.getAll()
-			.subscribe(bugs => this.bugs = bugs);
+			.subscribe(
+				bugs => {
+					this.bugs = bugs;
+					this.display('All the bugs are loaded');
+				}, 
+				() => this.display('Something went wrong')
+			);
+	}
+
+	display(msg){
+		this.message = msg;
+		setTimeout(() => this.message = '', 5000);
 	}
 
 	onBugCreated(newBug : Bug){
