@@ -11,7 +11,7 @@ export class BugApiService{
 	}
 	getAll() : Observable<Bug[]>{
 		return this.http
-			.get(this.serviceEndPoint)
+			.get<Bug[]>(this.serviceEndPoint)
 	}
 
 	save(bugData : Bug) : Observable<Bug>{
